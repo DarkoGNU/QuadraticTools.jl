@@ -1,3 +1,5 @@
+include("Utils.jl")
+
 struct expanded
     a
     b
@@ -5,9 +7,7 @@ struct expanded
 end
 
 function to_factored(F::expanded)
-    if (F.a == 0)
-        error("'a' can't be zero.")
-    end
+    check(F.a)
 
     delta = F.b^2 - (4 * F.a * F.c)
 
@@ -22,6 +22,8 @@ function to_factored(F::expanded)
 end
 
 function to_vertex(F::expanded)
+    check(F.a)
+
     delta = F.b^2 - (4 * F.a * F.c)
 
     p = -F.b / 2F.a

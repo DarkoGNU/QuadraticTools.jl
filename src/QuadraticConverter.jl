@@ -7,7 +7,7 @@ export expanded
 export factored
 export vertex
 
-#export to_expanded
+export to_expanded
 export to_factored
 export to_vertex
 
