@@ -1,4 +1,5 @@
 module QuadraticConverter
+
 include("Expanded.jl")
 include("Factored.jl")
 include("Vertex.jl")
@@ -10,5 +11,7 @@ export vertex
 export to_expanded
 export to_factored
 export to_vertex
+
+export value
 
 end # module

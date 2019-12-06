@@ -7,13 +7,9 @@ struct expanded
 end
 
 function to_factored(F::expanded)
-    check(F.a)
+    fcheck(F.a)
 
-    delta = F.b^2 - (4 * F.a * F.c)
-
-    if (delta < 0)
-        delta = Complex(delta)
-    end
+    delta = fdelta(F.a, F.b, F.c, true)
 
     x1 = (-F.b - sqrt(delta)) / 2F.a
     x2 = (-F.b + sqrt(delta)) / 2F.a
@@ -22,12 +18,16 @@ function to_factored(F::expanded)
 end
 
 function to_vertex(F::expanded)
-    check(F.a)
+    fcheck(F.a)
 
-    delta = F.b^2 - (4 * F.a * F.c)
+    delta = fdelta(F.a, F.b, F.c, false)
 
     p = -F.b / 2F.a
     q = -delta / 4F.a
 
     return vertex(F.a, p, q)
+end
+
+function value(F::expanded, x)
+    return F.a * x^2 + F.b * x + F.c
 end
