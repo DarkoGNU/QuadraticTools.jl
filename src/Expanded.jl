@@ -1,11 +1,13 @@
 include("Utils.jl")
 
+"a, b, c"
 struct expanded
     a
     b
     c
 end
 
+"Converts the expanded function into factored form"
 function to_factored(F::expanded)
     fcheck(F.a)
 
@@ -17,6 +19,7 @@ function to_factored(F::expanded)
     return factored(F.a, x1, x2)
 end
 
+"Converts the expanded function into vertex form"
 function to_vertex(F::expanded)
     fcheck(F.a)
 
@@ -28,6 +31,7 @@ function to_vertex(F::expanded)
     return vertex(F.a, p, q)
 end
 
+"Returns the result of the function applied to the second parameter"
 function value(F::expanded, x)
     return F.a * x^2 + F.b * x + F.c
 end
