@@ -1,6 +1,6 @@
 function fcheck(a)
     if a == 0
-        error("'a' can't be zero.")
+        throw(DomainError(a, "'a' can't be 0"))
     end
 end
 

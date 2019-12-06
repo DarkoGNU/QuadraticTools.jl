@@ -25,7 +25,7 @@ function to_factored(F::vertex)
     end
 
     x1 = F.p - sqrt(under_root)
-    x2 = F.p - sqrt(under_root)
+    x2 = F.p + sqrt(under_root)
 
     return factored(F.a, x1, x2)
 end
