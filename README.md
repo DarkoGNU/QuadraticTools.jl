@@ -13,14 +13,22 @@ Right now, however, that parameter can't be customized when using other function
 
 ## Usage
 
+### Creating quadratic functions
+
 - create a struct representing the expanded form: `expanded(a, b, c)`, e.g. `expanded(1, 5, 6)`
 - create a struct representing the factored form: `factored(a, x1, x2)`, e.g. `factored(1, -3.0, -2.0)`
 - create a struct representing the vertex form: `vertex(a, p, q)`, e.g. `vertex(1, -2.5, -0.25)`
+
+### Converting between different forms
 
 - convert a function to the expanded form: `to_expanded(other_form)`, e.g. `to_expanded(vertex(1, -2.5, -0.25))`
 - convert a function to the factored form: `to_factored(other_form)`, e.g. `to_factored(expanded(1, 5, 6))`
 - convert a function to the vertex form: `to_vertex(other_form)`, e.g. `to_vertex(factored(1, -3.0, -2.0))`
 
+### Calculating the value
+
 - calculate the value of a function in a certain point: `value(some_form, x)`, e.g. `value(expanded(1, 5, 6), 10)`
+
+### Comparing quadratic functions
 
 - compare two functions in the same form: just use `==`, e.g. `to_factored(vertex(-1, -2.5, -0.25)) == factored(-1, -2.5 - 0.5im, -2.5 + 0.5im)`
