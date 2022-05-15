@@ -14,5 +14,6 @@ module QuadraticTools
     export to_vertex
 
     export value
+    export fdelta
 
 end # module
