@@ -12,7 +12,7 @@ function to_expanded(F: Vertex)
     b = -2F.a * F.p
     c = F.a * F.p^2 + F.q
 
-    return expanded(F.a, b, c)
+    return Expanded(F.a, b, c)
 end
 
 function to_factored(F: Vertex)
@@ -27,7 +27,7 @@ function to_factored(F: Vertex)
     x1 = F.p - sqrt(under_root)
     x2 = F.p + sqrt(under_root)
 
-    return factored(F.a, x1, x2)
+    return Factored(F.a, x1, x2)
 end
 
 function value(F: Vertex, x)

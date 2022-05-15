@@ -12,7 +12,7 @@ function to_expanded(F::Factored)
     b = -F.a * (F.x1 + F.x2)
     c = F.a * F.x1 * F.x2
 
-    return expanded(F.a, b, c)
+    return Expanded(F.a, b, c)
 end
 
 function to_vertex(F::Factored)
