@@ -1,10 +1,10 @@
 # QuadraticTools
 
 [![Travis CI](https://app.travis-ci.com/DarkoGNU/QuadraticTools.jl.svg?branch=master)](https://app.travis-ci.com/DarkoGNU/QuadraticTools.jl)
-[![AppVeyor](https://codecov.io/gh/DarkoGNU/QuadraticTools.jl/branch/master/graph/badge.svg?token=dU2Rbxq6rE)](https://codecov.io/gh/DarkoGNU/QuadraticTools.jl)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/47f5b09asicai32v?svg=true)](https://ci.appveyor.com/project/DarkoGNU/quadratictools-jl)
 [![Codecov](https://codecov.io/gh/DarkoGNU/QuadraticTools.jl/branch/master/graph/badge.svg?token=dU2Rbxq6rE)](https://codecov.io/gh/DarkoGNU/QuadraticTools.jl)
 
-This package can convert between the three main forms of quadratic functions
+This package contains a set of functions useful when dealing with quadratic functions (polynomials of degree 2).
 
 ## Are complex / imaginary numbers handled?
 

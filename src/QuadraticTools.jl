@@ -5,9 +5,9 @@ module QuadraticTools
     include("Vertex.jl")
     include("Utils.jl")
 
-    export expanded
-    export factored
-    export vertex
+    export Expanded
+    export Factored
+    export Vertex
 
     export to_expanded
     export to_factored
