@@ -1,3 +1,3 @@
 using Documenter, QuadraticTools
 
-makedocs(sitename="My Documentation")
+makedocs(sitename="QuadraticTools Docs")
