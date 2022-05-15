@@ -6,8 +6,8 @@ struct Vertex
     q # y of the vertex
 end
 
-function to_expanded(F::Vertex)
-    fcheck(F.a)
+function toexpanded(F::Vertex)
+    _validitycheck
 
     b = -2F.a * F.p
     c = F.a * F.p^2 + F.q
@@ -15,8 +15,8 @@ function to_expanded(F::Vertex)
     return Expanded(F.a, b, c)
 end
 
-function to_factored(F::Vertex)
-    fcheck(F.a)
+function tofactored(F::Vertex)
+    _validitycheck
 
     under_root = -F.q / F.a
 
@@ -30,6 +30,6 @@ function to_factored(F::Vertex)
     return Factored(F.a, x1, x2)
 end
 
-function value(F::Vertex, x)
+function calcvalue(F::Vertex, x)
     return F.a * (x - F.p)^2 + F.q
 end

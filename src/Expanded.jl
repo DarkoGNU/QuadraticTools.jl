@@ -6,10 +6,10 @@ struct Expanded
     c
 end
 
-function to_factored(F::Expanded)
-    fcheck(F.a)
+function tofactored(F::Expanded)
+    _validitycheck
 
-    delta = fdelta(F.a, F.b, F.c, true)
+    delta = calcdelta(F.a, F.b, F.c)
 
     x1 = (-F.b - sqrt(delta)) / 2F.a
     x2 = (-F.b + sqrt(delta)) / 2F.a
@@ -17,10 +17,10 @@ function to_factored(F::Expanded)
     return Factored(F.a, x1, x2)
 end
 
-function to_vertex(F::Expanded)
-    fcheck(F.a)
+function tovertex(F::Expanded)
+    _validitycheck
 
-    delta = fdelta(F.a, F.b, F.c, false)
+    delta = calcdelta(F.a, F.b, F.c)
 
     p = -F.b / 2F.a
     q = -delta / 4F.a
@@ -28,6 +28,6 @@ function to_vertex(F::Expanded)
     return Vertex(F.a, p, q)
 end
 
-function value(F::Expanded, x)
+function calcvalue(F::Expanded, x)
     return F.a * x^2 + F.b * x + F.c
 end

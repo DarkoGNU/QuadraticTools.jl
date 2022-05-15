@@ -5,15 +5,15 @@ module QuadraticTools
     include("Vertex.jl")
     include("Utils.jl")
 
+    export calcdelta
+    export calcvalue
+
     export Expanded
     export Factored
     export Vertex
 
-    export to_expanded
-    export to_factored
-    export to_vertex
-
-    export value
-    export fdelta
+    export toexpanded
+    export tofactored
+    export tovertex
 
 end # module
