@@ -3,7 +3,7 @@ using Test
 
 @testset "QuadraticTools.jl" begin
     # check the 'a' parameter checker
-    @test_throws DomainError fcheck(0)
+    @test_throws DomainError QuadraticTools.fcheck(0)
 
     # check the delta function
     @test fdelta(1, 1, -1, false) == 5
