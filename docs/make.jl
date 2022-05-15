@@ -1,3 +1,3 @@
-using Documenter, QuadraticConverter
+using Documenter, QuadraticTools
 
 makedocs(sitename="My Documentation")

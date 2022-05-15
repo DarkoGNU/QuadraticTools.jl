@@ -1,4 +1,4 @@
-# QuadraticConverter.jl Documentation
+# QuadraticTools.jl Documentation
 
 ```@docs
 to_expanded(::factored)
