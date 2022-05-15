@@ -2,11 +2,11 @@ include("Utils.jl")
 
 struct Vertex
     a
-    p # x of the Vertex
-    q # y of the Vertex
+    p # x of the vertex
+    q # y of the vertex
 end
 
-function to_expanded(F: Vertex)
+function to_expanded(F::Vertex)
     fcheck(F.a)
 
     b = -2F.a * F.p
@@ -15,7 +15,7 @@ function to_expanded(F: Vertex)
     return Expanded(F.a, b, c)
 end
 
-function to_factored(F: Vertex)
+function to_factored(F::Vertex)
     fcheck(F.a)
 
     under_root = -F.q / F.a
@@ -30,6 +30,6 @@ function to_factored(F: Vertex)
     return Factored(F.a, x1, x2)
 end
 
-function value(F: Vertex, x)
+function value(F::Vertex, x)
     return F.a * (x - F.p)^2 + F.q
 end
