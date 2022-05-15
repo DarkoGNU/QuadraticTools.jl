@@ -1,4 +1,4 @@
-module QuadraticConverter
+module QuadraticTools
 
     include("Expanded.jl")
     include("Factored.jl")
