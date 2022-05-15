@@ -1,14 +1,14 @@
-using QuadraticConverter
+using QuadraticTools
 using Test
 
-@testset "QuadraticConverter.jl" begin
+@testset "QuadraticTools.jl" begin
     # check the 'a' parameter checker
-    @test_throws DomainError QuadraticConverter.fcheck(0)
+    @test_throws DomainError fcheck(0)
 
     # check the delta function
-    @test QuadraticConverter.fdelta(1, 1, -1, false) == 5
-    @test QuadraticConverter.fdelta(1, 1, 1, true) == -3 + 0im
-    @test QuadraticConverter.fdelta(1, 1, 1, false) == -3
+    @test fdelta(1, 1, -1, false) == 5
+    @test fdelta(1, 1, 1, true) == -3 + 0im
+    @test fdelta(1, 1, 1, false) == -3
 
     # check the functions of expanded
     @test to_factored(expanded(1, 5, 6)) == factored(1, -3.0, -2.0)
